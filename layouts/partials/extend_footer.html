@@ -1,3 +1,8 @@
 {{- /* Footer custom content area start */ -}}
-{{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
+{{- /* Insert any custom code web-analytics, resources, etc. here */ -}}
 {{- /* Footer custom content area end */ -}}
+<script>
+    (async () => {
+        document.querySelector('.entry-content').textContent = (await fetch('https://api.rua.dev/hitokoto?encode=text')).text()
+    })()
+</script>
